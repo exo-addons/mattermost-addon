@@ -1,0 +1,18 @@
+<%
+import org.exoplatform.commons.utils.PropertyManager;
+import org.exoplatform.social.core.space.SpaceUtils;
+import org.exoplatform.social.core.space.model.Space;
+import org.exoplatform.social.core.identity.model.Identity;
+
+Space space = SpaceUtils.getSpaceByContext();
+Identity spaceIdentity = SpaceUtils.getSpaceIdentityByContext();
+String mattermostTeamName = "";
+String mattermostUrl = PropertyManager.getProperty("exo.addon.mattermost.url");
+if(spaceIdentity != null && spaceIdentity.getProfile() != null
+&& spaceIdentity.getProfile().getProperty(org.exoplatform.addons.mattermost.MattermostSpaceListener.MATTERMOST_TEAM_NAME) != null) {
+  mattermostUrl = mattermostUrl + "/" + spaceIdentity.getProfile().getProperty(org.exoplatform.addons.mattermost.MattermostSpaceListener.MATTERMOST_TEAM_NAME);
+}
+%>
+<script type="text/javascript">
+  eXo.mattermostUrl = '<%= mattermostUrl %>';
+</script>
