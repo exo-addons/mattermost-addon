@@ -8,7 +8,7 @@
     <artifactId>exo-mattermost-addon-parent</artifactId>
     <version>1.0.x-SNAPSHOT</version>
   </parent>
-  <artifactId>exo-mattermost-addon-packaging</artifactId>
+  <artifactId>mattermost-addon-packaging</artifactId>
   <packaging>pom</packaging>
   <name>eXo Mattermost - Packaging</name>
   <dependencies>

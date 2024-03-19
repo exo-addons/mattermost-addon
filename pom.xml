@@ -30,7 +30,7 @@
   <artifactId>exo-mattermost-addon-parent</artifactId>
   <version>1.0.x-SNAPSHOT</version>
   <packaging>pom</packaging>
-  <name>eXo Mattermost integration addon</name>
+  <name>eXo Add-on :: Mattermost integration</name>
   <description>Integration addon for eXo and Mattermost</description>
   <modules>
     <module>services</module>
